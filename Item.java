@@ -6,6 +6,7 @@ package com.evhacks.qrmenu;
 public class Item {
     String foodName;
     double price;
+    boolean isFavorite = false;
     public Item(String f, double p){
         foodName = f;
         price = p;
@@ -18,5 +19,11 @@ public class Item {
     }
     public double getPrice(){
         return price;
+    }
+    boolean getFavorite(){
+        return isFavorite;
+    }
+    void setFavorite() {
+        isFavorite = !isFavorite;
     }
 }
