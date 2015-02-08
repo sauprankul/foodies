@@ -1,17 +1,28 @@
 package com.evhacks.foodies;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class ItemActivity extends ActionBarActivity {
+    String itemname, rest_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
+
+        Intent intent = getIntent();
+        rest_name = intent.getStringExtra("rest_name");
+        itemname = intent.getStringExtra("itemname");
+//        Log.w("debug", "-" + rest_name + "-"); name is fine
+        TextView view = (TextView)this.findViewById(R.id.rest_name);
+        view.setText(itemname);
+
     }
 
 
