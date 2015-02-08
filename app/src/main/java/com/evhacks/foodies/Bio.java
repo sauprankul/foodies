@@ -1,17 +1,26 @@
 package com.evhacks.foodies;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class Bio extends ActionBarActivity {
+    String fName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bio);
+
+        Intent intent = getIntent();
+        fName = intent.getStringExtra("friend name");
+//        Log.w("debug", "-" + rest_name + "-"); name is fine
+        TextView view = (TextView)this.findViewById(R.id.rest_name);
+        view.setText(fName);
     }
 
 
