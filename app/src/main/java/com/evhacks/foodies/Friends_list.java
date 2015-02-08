@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.view.View;
+import android.widget.TextView;
+
 
 public class Friends_list extends ActionBarActivity {
 
@@ -13,6 +16,22 @@ public class Friends_list extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends_list);
+
+//        RestaurantList mahlist = new RestaurantList();
+        Friends friends = new Friends();
+        TextView text_field = (TextView) this.findViewById(R.id.rest1);
+        text_field.setText(friends.next());
+        text_field = (TextView) this.findViewById(R.id.rest2);
+        text_field.setText(friends.next());
+        text_field = (TextView) this.findViewById(R.id.rest3);
+        text_field.setText(friends.next());
+        text_field = (TextView) this.findViewById(R.id.rest4);
+        text_field.setText("not coded");
+        text_field = (TextView) this.findViewById(R.id.rest5);
+        text_field.setText("also not coded");
+
+
+
     }
 
 
@@ -21,6 +40,7 @@ public class Friends_list extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_friends_list, menu);
         return true;
+
     }
 
     @Override

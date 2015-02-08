@@ -11,32 +11,38 @@ import java.util.ArrayList;
 public class Person {
 String name;
     Restaurant[] tracker = new Restaurant[5];
-ArrayList<Restaurant> favorites;
-ArrayList<ArrayList<Item>> foodsFromRestaurants;
-ArrayList<Item> myOrder;
+ArrayList favorites;
+ArrayList foodsFromRestaurants = new ArrayList();
+ArrayList myOrder;
     Restaurant currentRestaurant;
 
 public Person(String name){
     this.name = name;
-    favorites = null;
-    foodsFromRestaurants = null;
+    favorites = new ArrayList<Restaurant>();
+    foodsFromRestaurants = new ArrayList<ArrayList<com.evhacks.foodies.Item>>();
+
     currentRestaurant = null;
 }
 
 
 int counter = 0;
 public void addFavorites(Restaurant r){
+    if (r == null) {
+        System.exit(-1);
+    }
     favorites.add(r);
     currentRestaurant = r;
 }
 
-    void addFoods(Item i, Restaurant r){
+    void addFoods(com.evhacks.foodies.Item i, Restaurant r){
        if(currentRestaurant == r) {
-           foodsFromRestaurants.get(counter).add(i);
+           ArrayList thislist = (ArrayList)foodsFromRestaurants.get(counter);
+           thislist.add(i);
        }
         else{
            counter ++ ;
-           foodsFromRestaurants.get(counter).add(i);
+           ArrayList thislist = (ArrayList)foodsFromRestaurants.get(counter);
+           thislist.add(i);
        }
         tracker[counter%5] = currentRestaurant;
     }
@@ -53,7 +59,7 @@ public void addFavorites(Restaurant r){
                 index = i;
             }//end if
         }//end for
-        return foodsFromRestaurants.get(index);
+        return (ArrayList)foodsFromRestaurants.get(index);
     }
 
     double getPricesOfItems(Restaurant r){
@@ -64,9 +70,9 @@ public void addFavorites(Restaurant r){
             }//if
         }//fpr
         double sum = 0;
-        ArrayList<Item> f = foodsFromRestaurants.get(index);
+        ArrayList f = (ArrayList)foodsFromRestaurants.get(index);
         for(int i = 0; i <f.size(); i++){
-            sum+=f.get(i).getPrice();
+            sum+= ((Item)(f.get(i))).getPrice();
         }
         return sum;
     }
