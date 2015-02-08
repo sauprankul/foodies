@@ -71,11 +71,12 @@ public class MenuDisplay extends ActionBarActivity {
     }
 
     public void open_item(View view) {
-        Intent intent = new Intent(this, Item.class);
+        Intent intent = new Intent(this, ItemActivity.class);
         TextView v = (TextView)(view);
         String itemname = (String)v.getText();
         intent.putExtra("itemname", itemname);
         intent.putExtra("restname", rest_name);
+        startActivity(intent);
     }
 
 
