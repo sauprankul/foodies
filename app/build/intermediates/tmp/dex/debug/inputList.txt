@@ -1,0 +1,5 @@
+C:\Users\skwis_000\AndroidStudioProjects\QRMenu\app\build\intermediates\classes\debug
+C:\Users\skwis_000\AndroidStudioProjects\QRMenu\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-d9e857cdccec33577abdb9ac43f19a96600e46b9.jar
+C:\Users\skwis_000\AndroidStudioProjects\QRMenu\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-6a8c19311dfd90fc5b3dd15204f18225057cccb9.jar
+C:\Users\skwis_000\AndroidStudioProjects\QRMenu\app\build\intermediates\pre-dexed\debug\classes-d800cd0ab9a47e20c3a90a615fc7a75153f0cec3.jar
+C:\Users\skwis_000\AndroidStudioProjects\QRMenu\app\build\intermediates\pre-dexed\debug\classes-21bd81f14ed6c7bd6122eea0d7d580f65aa73964.jar

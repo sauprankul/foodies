@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.evhacks.foodies.Favorites">
+    <item android:id="@+id/start_all" android:title="All"
+        android:orderInCategory="100" app:showAsAction="never"/>
+    <item android:id="@+id/start_friends" android:title="Friends"
+        android:orderInCategory="101" app:showAsAction="never"/>
+</menu>
+<!-- From: file:/C:/Users/skwis_000/AndroidStudioProjects/QRMenu/app/src/main/res/menu/menu_favorites.xml -->

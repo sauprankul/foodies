@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.evhacks.foodies"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.evhacks.foodies.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.evhacks.foodies.RestaurantsView"
+            android:label="@string/title_activity_restaurants_list"
+            android:parentActivityName="com.evhacks.foodies.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.MainActivity" />
+        </activity>
+        <!--
+            <activity
+            android:name=".Welcome"
+            android:label="@string/title_activity_welcome"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.MainActivity" />
+        </activity>
+        -->
+        <activity
+            android:name="com.evhacks.foodies.Favorites"
+            android:label="@string/title_activity_favorites"
+            android:parentActivityName="com.evhacks.foodies.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.evhacks.foodies.All"
+            android:label="@string/title_activity_all"
+            android:parentActivityName="com.evhacks.foodies.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.evhacks.foodies.Friends_list"
+            android:label="@string/title_activity_friends_list"
+            android:parentActivityName="com.evhacks.foodies.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.evhacks.foodies.MenuDisplay"
+            android:label="@string/title_activity_menu_display"
+            android:parentActivityName="com.evhacks.foodies.All" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.All" />
+        </activity>
+    </application>
+
+</manifest>
