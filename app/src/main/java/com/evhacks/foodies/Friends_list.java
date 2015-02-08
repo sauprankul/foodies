@@ -43,6 +43,15 @@ public class Friends_list extends ActionBarActivity {
 
     }
 
+    public void open_menu(View view) {
+        Intent intent = new Intent(this, Bio.class);
+        TextView v = (TextView)(view);
+        String fName = (String)v.getText();
+        intent.putExtra("friend name", fName);
+       // intent.putExtra("restname", rest_name);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
