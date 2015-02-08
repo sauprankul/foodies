@@ -58,7 +58,10 @@
             android:layout_gravity="left"
             android:textSize="25dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:onClick="open_item"
+            android:maxLines="1"
+            android:clickable="true"/>
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -68,7 +71,10 @@
             android:layout_gravity="left"
             android:textSize="25dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:onClick="open_item"
+            android:maxLines="1"
+            android:clickable="true"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -79,7 +85,10 @@
             android:layout_gravity="left"
             android:textSize="25dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:onClick="open_item"
+            android:maxLines="1"
+            android:clickable="true"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -90,7 +99,10 @@
             android:layout_gravity="left"
             android:textSize="25dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:onClick="open_item"
+            android:maxLines="1"
+            android:clickable="true"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -101,7 +113,11 @@
             android:layout_gravity="left"
             android:textSize="25dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:onClick="open_item"
+            android:maxLines="1"
+            android:clickable="true"/>
+
 
     </LinearLayout>
 
@@ -130,7 +146,8 @@
         android:gravity="left"
         android:layout_gravity="left"
         android:textSize="25dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:maxLines="1"/>
 
     <TextView
         android:layout_width="fill_parent"

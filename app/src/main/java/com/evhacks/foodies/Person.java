@@ -34,6 +34,14 @@ public void addFavorites(Restaurant r){
     currentRestaurant = r;
 }
 
+public void removeFavorites(Restaurant r){
+    if (r == null) {
+        System.exit(-1);
+    }
+    favorites.remove(r);
+    currentRestaurant = r;
+}
+
     void addFoods(com.evhacks.foodies.Item i, Restaurant r){
        if(currentRestaurant == r) {
            ArrayList thislist = (ArrayList)foodsFromRestaurants.get(counter);

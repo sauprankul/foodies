@@ -24,14 +24,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.evhacks.foodies.MainActivity" />
         </activity>
-<!--        <activity
+        <!--
+            <activity
             android:name=".Welcome"
             android:label="@string/title_activity_welcome"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.evhacks.foodies.MainActivity" />
-        </activity>-->
+        </activity>
+        -->
         <activity
             android:name=".Favorites"
             android:label="@string/title_activity_favorites"
@@ -63,6 +65,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.evhacks.foodies.All" />
+        </activity>
+        <activity
+            android:name=".Bio"
+            android:label="@string/title_activity_bio"
+            android:parentActivityName=".Friends_list" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.Friends_list" />
+        </activity>
+        <activity
+            android:name=".ItemActivity"
+            android:label="@string/title_activity_item"
+            android:parentActivityName=".MenuDisplay" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evhacks.foodies.MenuDisplay" />
         </activity>
     </application>
 

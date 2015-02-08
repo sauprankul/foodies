@@ -8,6 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+import android.content.res.Resources;
+import android.util.Log;
+
+import java.util.ArrayList;
 
 
 public class MenuDisplay extends ActionBarActivity {
@@ -20,13 +24,27 @@ public class MenuDisplay extends ActionBarActivity {
         setContentView(R.layout.activity_menu_display);
         Intent intent = getIntent();
         rest_name = intent.getStringExtra("rest_name");
+//        Log.w("debug", "-" + rest_name + "-"); name is fine
         TextView view = (TextView)this.findViewById(R.id.rest_name);
         view.setText(rest_name);
 
+        ArrayList<Item> mahMenus = MenuPrice.getMenuItems(rest_name);
+
+        Resources r = getResources();
+        String pkg = getPackageName();
+        for (int i = 0; i < mahMenus.size(); i++){
+            String thisid = "item" + (i + 1);
+            TextView tv1 = (TextView)findViewById(r.getIdentifier(thisid, "id", pkg));
+            tv1.setText(mahMenus.get(i).getFoodName());
+            thisid = "price" + (i + 1);
+            TextView tv2 = (TextView)findViewById(r.getIdentifier(thisid, "id", pkg));
+            tv2.setText("$" + mahMenus.get(i).getPrice());
+
+        }
     }
 
-    public com.evhacks.foodies.Menu getMenu(String rest_name) {
-        return new com.evhacks.foodies.Menu();
+    public MenuPrice getMenu(String rest_name) {
+        return new com.evhacks.foodies.MenuPrice();
     }
 
 
@@ -51,6 +69,16 @@ public class MenuDisplay extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void open_item(View view) {
+        Intent intent = new Intent(this, Item.class);
+        TextView v = (TextView)(view);
+        String itemname = (String)v.getText();
+        intent.putExtra("itemname", itemname);
+        intent.putExtra("restname", rest_name);
+    }
+
+
     public void onToggleClicked(View view) {
         // Is the toggle on?
         boolean on = ((ToggleButton) view).isChecked();
@@ -77,7 +105,14 @@ public class MenuDisplay extends ActionBarActivity {
             myList.getList().get(index).setFavorite(); //idk if this is needed
 
         } else {
-            // Disable vibrate
+            RestaurantList myList = new RestaurantList();
+            int index = 0;
+            for(int i = 0 ; i < myList.getList().size(); i++){
+                if(rest_name == myList.getList().get(i).getName()){
+                    index = i; break;
+                }
+            }
+            MainActivity.thisUser.removeFavorites(myList.getList().get(index));
         }
     }
 

@@ -13,5 +13,7 @@
     <string name="title_activity_all">All</string>
     <string name="title_activity_friends_list">Friends</string>
     <string name="title_activity_menu_display">MenuDisplay</string>
+    <string name="title_activity_bio">Bio</string>
+    <string name="title_activity_item">ItemActivity</string>
 
 </resources>
