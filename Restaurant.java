@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Restaurant {
     String name;
+    boolean isFavorite = false;
     ArrayList<Item> menu = new ArrayList<Item>();
     public Restaurant(String n, ArrayList<Item> m){
         name = n;
@@ -25,6 +26,14 @@ public class Restaurant {
     public String getName(){
         return name;
     }
+    public boolean getFavorite(){
+        return isFavorite;
+    }
+    public void setFavorite(){
+        isFavorite = !isFavorite;
+    }
+
+
 
 
 }
