@@ -10,11 +10,12 @@ import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
-
+    static Person thisUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        thisUser = new Person("current user");
     }
 
 
@@ -44,6 +45,9 @@ public class MainActivity extends ActionBarActivity {
 
 
     }
+//    public Person getUser(){
+//        return thisUser;
+//    }
 
     public void login_method(View view){
         Intent intent = new Intent(this, All.class);

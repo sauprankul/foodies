@@ -5,7 +5,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 
 public class MenuDisplay extends ActionBarActivity {
@@ -31,7 +33,7 @@ public class MenuDisplay extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-     //   getMenuInflater().inflate(R.menu.menu_menu_display, menu);
+        //   getMenuInflater().inflate(R.menu.menu_menu_display, menu);
         return true;
     }
 
@@ -49,4 +51,34 @@ public class MenuDisplay extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void onToggleClicked(View view) {
+        // Is the toggle on?
+        boolean on = ((ToggleButton) view).isChecked();
+
+        if (on) {
+
+            //get the user's person thing
+
+
+            // find rest_name in restaurant
+            RestaurantList myList = new RestaurantList();
+            int index = 0;
+            for(int i = 0 ; i < myList.getList().size(); i++){
+                if(rest_name == myList.getList().get(i).getName()){
+                    index = i; break;
+                }
+            }
+            MainActivity.thisUser.addFavorites(myList.getList().get(index));
+
+
+            //add it to favorites array
+            //set isFavorite to true if needed in restaurant list
+
+            myList.getList().get(index).setFavorite(); //idk if this is needed
+
+        } else {
+            // Disable vibrate
+        }
+    }
+
 }

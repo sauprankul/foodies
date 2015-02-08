@@ -26,8 +26,8 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Switch"
-        android:id="@+id/switch1"
+        android:text="Favorite"
+        android:id="@+id/fav_switch"
         android:layout_marginTop="118dp"
         android:layout_below="@+id/imageView"
         android:layout_alignEnd="@+id/rest_name" />
@@ -39,13 +39,129 @@
         android:layout_below="@+id/rest_name"
         android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/fav_switch"
+        android:layout_alignStart="@+id/rest_name"
+        android:layout_marginTop="26dp"
+        android:layout_toStartOf="@+id/fav_switch"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="First Item"
+            android:id="@+id/item1"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:textSize="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Second Item"
+            android:id="@+id/item2"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:textSize="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Third Item"
+            android:id="@+id/item3"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:textSize="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Fourth Item"
+            android:id="@+id/item4"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:textSize="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Fifth Item"
+            android:id="@+id/item5"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:textSize="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/fav_switch">
+
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
-        android:layout_alignBottom="@+id/switch1"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/imageView"
-        android:text="Favorite:" />
+        android:text="$1.00"
+        android:id="@+id/price1"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="$2.00"
+        android:id="@+id/price2"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="$3.00"
+        android:id="@+id/price3"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="$4.00"
+        android:id="@+id/price4"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="$5.00"
+        android:id="@+id/price5"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp" />
+    </LinearLayout>
+
 
 </RelativeLayout>
