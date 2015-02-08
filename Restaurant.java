@@ -20,8 +20,8 @@ public class Restaurant {
         }
         return a;
     }
-    public String getMenu(){
-        return menu.toString();
+    public ArrayList<Item> getMenu(){
+        return menu;
     }
     public String getName(){
         return name;
