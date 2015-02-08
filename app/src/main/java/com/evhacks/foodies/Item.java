@@ -1,4 +1,4 @@
-package com.evhacks.qrmenu;
+package com.evhacks.foodies;
 
 /**
  * Created by rohan on 2/7/2015.

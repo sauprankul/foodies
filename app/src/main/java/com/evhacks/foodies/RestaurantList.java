@@ -1,4 +1,4 @@
-package com.evhacks.qrmenu;
+package com.evhacks.foodies;
 
 import java.util.ArrayList;
 
